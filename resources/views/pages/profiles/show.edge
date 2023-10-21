@@ -102,6 +102,14 @@
                 @end
               </div>
             @endif
+
+            @if (auth.user && auth.user.id === user.id)
+              <div class="mt-4">
+                @buttons.primary.inverse({ href: route('users.settings.index', { section: 'profile' }), block: true, upFollow: true })
+                  Edit Your Profile
+                @end
+              </div>
+            @endif
           </div>
         </div>
       </div>
